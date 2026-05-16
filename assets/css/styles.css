@@ -1,0 +1,192 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+.contenedor-principal {
+    display: flex;          /* Activa flexbox → los hijos se ponen en fila */
+    height: 100vh;          /* Ocupa toda la altura de la pantalla */
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+
+.seccion-contactos {
+    flex: 0 0 280px;
+    display: flex;             /* También es flex para organizar sus hijos en columna */
+    flex-direction: column;    /* Apila: header → botón → lista */
+    border-right: 1px solid #ddd;
+    overflow-y: auto;          /* Si hay muchos contactos, permite scroll */
+}
+
+
+.header-usuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* Empuja los íconos al extremo derecho */
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Datos del usuario: imagen circular + nombre/estado en fila */
+.datos-usuario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;              /* Espacio entre la imagen y el texto */
+}
+
+.datos-usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;     /* Hace la imagen circular */
+    object-fit: cover;
+}
+
+.nombre-usuario {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.estado-usuario {
+    font-size: 11px;
+    color: #888;
+}
+
+/* Íconos del header */
+.iconos-header {
+    display: flex;
+    gap: 12px;
+    color: #555;
+    font-size: 16px;
+}
+
+.iconos-header i {
+    cursor: pointer;
+}
+
+
+.seccion-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    padding: 16px;
+}
+
+.btn-nuevo-chat {
+    background-color: #7c5cbf;  /* Color morado como en el diseño */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.btn-nuevo-chat:hover {
+    background-color: #6a4daa;
+}
+
+
+.lista-contactos {
+    display: flex;
+    flex-direction: column;    /* Cada contacto va uno debajo del otro */
+    list-style: none;          /* Quitamos los puntos de la lista */
+}
+
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.contacto:hover {
+    background-color: #f5f0ff;
+}
+
+.contacto img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;            /* La imagen no se encoge si el espacio es pequeño */
+}
+
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-contacto {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.ultimo-mensaje {
+    font-size: 12px;
+    color: #999;
+}
+
+
+.seccion-principal {
+    flex: 1;                   /* Ocupa todo el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centra verticalmente */
+    align-items: center;       /* Centra horizontalmente */
+    text-align: center;
+    padding: 40px;
+}
+
+.contenido-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 380px;
+}
+
+/* Logo morado con ícono de handshake */
+.logo-nertworking {
+    background-color: #9b7ed4;
+    width: 160px;
+    height: 160px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nertworking i {
+    font-size: 70px;
+    color: white;
+}
+
+.contenido-central h2 {
+    font-size: 26px;
+    color: #222;
+}
+
+.contenido-central p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+}
